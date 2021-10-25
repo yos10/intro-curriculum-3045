@@ -8,8 +8,8 @@ html(lang="jp")
     form(method="post", action=path)
       span 名前: 
       input(type="text", name="name")
-      input(type="radio", name="favorite", value=firstItem)
-      span #{firstItem} 
-      input(type="radio", name="favorite", value=secondItem)
-      span #{secondItem} 
+      input(type="radio", id="firstItem", name="favorite", value=firstItem checked)
+      label(for="firstItem") #{firstItem} 
+      input(type="radio", id="secondItem", name="favorite", value=secondItem)
+      label(for="secondItem") #{secondItem} 
       button(type="submit") 投稿
