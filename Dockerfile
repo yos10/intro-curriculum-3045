@@ -9,5 +9,5 @@ ENV TZ Asia/Tokyo
 WORKDIR /app
 COPY package.json .
 RUN yarn install
-COPY form.pug index.js run.sh .
+COPY form.pug index.js run.sh /app/
 CMD ["sh", "run.sh"]
