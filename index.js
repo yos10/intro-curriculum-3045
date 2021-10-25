@@ -10,7 +10,14 @@ const server = http
 
     switch (req.method) {
       case 'GET':
-        if (req.url === '/enquetes/yaki-shabu') {
+        if (req.url === '/') {
+          const enquetesUrl = ['/enquetes/yaki-shabu', '/enquetes/rice-bread', '/enquetes/sushi-pizza'];
+          res.write(
+            pug.renderFile('./index.pug', {
+              enquetesUrl
+            })
+          );
+        } else if (req.url === '/enquetes/yaki-shabu') {
           res.write(
             pug.renderFile('./form.pug', {
               path: req.url,

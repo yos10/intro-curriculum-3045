@@ -1,0 +1,11 @@
+doctype html
+html(lang="jp")
+  head
+    meta(charset="UTF-8")
+    title アンケート
+  body
+    h1 アンケート
+    ul
+    each url in enquetesUrl
+      li
+        a(href=`${url}`) #{url}
